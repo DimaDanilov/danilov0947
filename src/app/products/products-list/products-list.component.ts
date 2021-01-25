@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./products-list.component.css'],
 })
 export class ProductsListComponent implements OnInit {
-  users: Product[];
+  products: Product[];
 
   constructor(private productsService: ProductsService, private router: Router) {}
 
@@ -20,8 +20,8 @@ export class ProductsListComponent implements OnInit {
 
   async getData() {
     try {
-      let users = this.productsService.getAll();
-      this.users = isNullOrUndefined(await users) ? [] : await users;
+      let products = this.productsService.getAll();
+      this.products = isNullOrUndefined(await products) ? [] : await products;
     } catch (err) {
       console.error(err);
     }

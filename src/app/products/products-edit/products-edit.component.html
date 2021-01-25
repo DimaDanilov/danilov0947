@@ -1,23 +1,76 @@
 <div class="container-fluid">
     <form [formGroup]="productForm">
       <div class="form-group">
-        <label for="username">Имя</label>
+        <label for="productname">Название <span class="red_star">*</span></label>
         <input
           type="text"
           class="form-control"
-          id="username"
-          placeholder="Имя"
+          id="productname"
+          placeholder="Введите название..."
           formControlName="name"
         />
       </div>
       <div class="form-group">
-        <label for="usersurname">Фамилия</label>
+        <label for="productarticle">Артикул <span class="red_star">*</span></label>
         <input
           type="text"
           class="form-control"
-          id="usersurname"
-          placeholder="Фамилия"
-          formControlName="surname"
+          id="productarticle"
+          placeholder="Введите артикул товара..."
+          formControlName="article"
+        />
+      </div>
+      <div class="form-group">
+        <label for="productprice">Цена <span class="red_star">*</span></label>
+        <input
+          type="number"
+          class="form-control"
+          id="productprice"
+          placeholder="Введите цену..."
+          formControlName="price"
+        />
+      </div>
+      <div class="form-group">
+        <label for="productbrand">Производитель <span class="red_star">*</span></label>
+        <input
+          type="text"
+          class="form-control"
+          id="productbrand"
+          placeholder="Введите производителя..."
+          formControlName="brand"
+        />
+      </div>
+      <div class="form-group">
+        <label for="productcategory">Категория товара <span class="red_star">*</span></label>
+        <select class="custom-select" formControlName="category" [ngModel]="category">
+          <option [ngValue]="0">IT отдел</option>
+          <option [ngValue]="1">Отдел продаж</option>
+          <option [ngValue]="2">Отдел доставки</option>
+          <option [ngValue]="3">Юридический отдел</option>
+          <!-- <option [ngValue]="myCategoryProduct.furniture">IT отдел</option>
+          <option [ngValue]="myCategoryProduct.technics">Отдел продаж</option>
+          <option [ngValue]="myCategoryProduct.books">Отдел доставки</option>
+          <option [ngValue]="myCategoryProduct.phones">Юридический отдел</option> -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="productweight">Вес <span class="red_star">*</span></label>
+        <input
+          type="number"
+          class="form-control"
+          id="productweight"
+          placeholder="Введите вес товара..."
+          formControlName="weight"
+        />
+      </div>
+      <div class="form-group">
+        <label for="productamount">Количество на складе <span class="red_star">*</span></label>
+        <input
+          type="number"
+          class="form-control"
+          id="productamount"
+          placeholder="Введите количество товара на складе..."
+          formControlName="amount"
         />
       </div>
       <button class="btn btn-primary mr-4" [disabled]="productForm.invalid" (click)="onSave()">

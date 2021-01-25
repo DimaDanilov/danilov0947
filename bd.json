@@ -2,13 +2,13 @@
   "products": [
     {
       "name": "Ivasasa",
-      "surname": "Ivanov",
+      "article": "фыв",
+      "price": 123123,
+      "brand": "фыв",
+      "category": 1,
+      "weight": 123,
+      "amount": 1231,
       "id": 1
-    },
-    {
-      "name": "Vasya",
-      "surname": "Ivanov",
-      "id": 2
     }
   ]
 }

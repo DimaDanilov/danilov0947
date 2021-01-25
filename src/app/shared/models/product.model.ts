@@ -1,14 +1,17 @@
 export interface Product {
     name: string;
-    surname: string;
+    article: string;
+    price: number;
+    brand: string;
+    category: string;
+    weight: number;
+    amount: number;
     id?: number;
 }
-  
 
-// название, 
-// артикул, 
-// цена, 
-// производитель, 
-// категория, 
-// вес, 
-// количество на складе. 
+export enum MyCategoryProduct {
+    furniture,
+    technics,
+    books,
+    phones,
+}
