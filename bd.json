@@ -7,7 +7,7 @@
       "brand": "Apple",
       "category": 3,
       "weight": 0.1,
-      "amount": 1251,
+      "amount": 12,
       "id": 1
     },
     {
@@ -19,6 +19,16 @@
       "weight": 3,
       "amount": 152,
       "id": 2
+    },
+    {
+      "name": "asd",
+      "article": "adwd",
+      "price": 1231231231,
+      "brand": "aeqwd",
+      "category": 1,
+      "weight": 222,
+      "amount": 1,
+      "id": 3
     }
   ]
 }

@@ -68,4 +68,31 @@ export class ProductsListComponent implements OnInit {
         return("Телефоны");
     }
   }
+
+  lastsort=-1;
+  sortType=0;
+
+  LastSortCounter(sortType: number){
+    if (sortType==0) {
+      if (this.lastsort!=0){
+        this.lastsort=0;
+      }
+      else {
+        this.lastsort=1;
+      }
+      this.sortType=0;
+    }
+    else {
+      if (this.lastsort!=2){
+        this.lastsort=2;
+      }
+      else {
+        this.lastsort=3;
+      }
+      this.sortType=1;
+    }
+  }
+
+
+
 }

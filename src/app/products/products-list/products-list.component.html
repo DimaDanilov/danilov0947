@@ -6,9 +6,9 @@
           <th scope="col">Название</th>
           <th scope="col" width="15%">Категория</th>
           <th scope="col" width="15%">Вес(кг)</th>
-          <th scope="col" width="10%">Цена(руб.)</th>
+          <th scope="col" width="10%" class="sortTitle" (click)="LastSortCounter(0)">Цена(руб.)</th>
           <th scope="col" width="2%"></th>
-          <th scope="col" width="10%">Количество на складе</th>
+          <th scope="col" width="10%" class="sortTitle" (click)="LastSortCounter(1)">Количество на складе</th>
           <th scope="col" width="2%"></th>
           <th class="text-right" scope="col">
             <button class="btn btn-primary" (click)="onAddProfile()">
@@ -18,7 +18,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let product of products">
+        <tr *ngFor="let product of products | sort: lastsort: sortType">
           <td scope="row">{{ product.id }}</td>
           <td>{{ product.name }}</td>
           <td>{{ FindCategoryName(product.category) }}</td>
