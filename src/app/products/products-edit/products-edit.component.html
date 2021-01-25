@@ -40,17 +40,14 @@
           formControlName="brand"
         />
       </div>
+      
       <div class="form-group">
         <label for="productcategory">Категория товара <span class="red_star">*</span></label>
         <select class="custom-select" formControlName="category" [ngModel]="category">
-          <option [ngValue]="0">Мебель</option>
-          <option [ngValue]="1">Техника</option>
-          <option [ngValue]="2">Книги</option>
-          <option [ngValue]="3">Телефоны</option>
-          <!-- <option [ngValue]="myCategoryProduct.furniture">IT отдел</option>
-          <option [ngValue]="myCategoryProduct.technics">Отдел продаж</option>
-          <option [ngValue]="myCategoryProduct.books">Отдел доставки</option>
-          <option [ngValue]="myCategoryProduct.phones">Юридический отдел</option> -->
+          <option [ngValue]="myCategoryProduct.furniture">Мебель</option>
+          <option [ngValue]="myCategoryProduct.technics">Техника</option>
+          <option [ngValue]="myCategoryProduct.books">Книги</option>
+          <option [ngValue]="myCategoryProduct.phones">Телефоны</option>
         </select>
       </div>
       <div class="form-group">

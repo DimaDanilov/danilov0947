@@ -15,7 +15,7 @@ export class ProductsEditComponent implements OnInit {
   product: Product;
   productForm: FormGroup;
   category: number;
-  myCategoryProduct: MyCategoryProduct;
+  myCategoryProduct = MyCategoryProduct;
 
   constructor(
     private activatedRouter: ActivatedRoute,

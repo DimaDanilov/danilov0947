@@ -21,7 +21,7 @@
         <tr *ngFor="let product of products">
           <td scope="row">{{ product.id }}</td>
           <td>{{ product.name }}</td>
-          <td>{{ product.category }}</td>
+          <td>{{ FindCategoryName(product.category) }}</td>
           <td>{{ product.weight }}</td>
           <td>{{ product.price }}</td>
           <td>

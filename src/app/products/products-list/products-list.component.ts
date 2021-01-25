@@ -31,7 +31,7 @@ export class ProductsListComponent implements OnInit {
     this.router.navigate([this.router.url, 'profile', id]);
   }
 
-  async onDecreaseAmount(id: number){
+  async onDecreaseAmount(id: number) {
     try {
       let necessaryproduct = this.products.find(x => x.id === id);
       if (necessaryproduct.amount>=1)
@@ -42,7 +42,7 @@ export class ProductsListComponent implements OnInit {
     }
   }
 
-  async onIncreaseAmount(id: number){
+  async onIncreaseAmount(id: number) {
     try {
       let necessaryproduct = this.products.find(x => x.id === id);
       necessaryproduct.amount++;
@@ -54,5 +54,18 @@ export class ProductsListComponent implements OnInit {
 
   onAddProfile() {
     this.router.navigate([this.router.url, 'profile']);
+  }
+
+  FindCategoryName(categoryid) {
+    switch (categoryid) {
+      case 0:
+        return("Мебель");
+      case 1:
+        return("Техника");
+      case 2:
+        return("Книги");
+      case 3:
+        return("Телефоны");
+    }
   }
 }
