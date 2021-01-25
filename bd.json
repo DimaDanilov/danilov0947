@@ -29,6 +29,16 @@
       "weight": 222,
       "amount": 2,
       "id": 3
+    },
+    {
+      "name": "фв",
+      "article": "фывф",
+      "price": 2131,
+      "brand": "фаы",
+      "category": 0,
+      "weight": 123,
+      "amount": 0,
+      "id": 4
     }
   ]
 }

@@ -11,6 +11,11 @@
     </select>
   </div>
 
+  <div>
+    <input type="checkbox" checked [(ngModel)]="check_status"/>
+    <label for="presence">В наличии</label>
+  </div>
+
 
     <table class="table">
 
@@ -32,8 +37,7 @@
         </tr>
       </thead>
       <tbody>
-        <!-- <tr *ngFor="let product of products | sort: lastsort: sortType"> -->
-          <tr *ngFor="let product of products | sort: lastsort: sortType | filter: category">
+        <tr *ngFor="let product of products | sort: lastsort: sortType | filter: category: check_status">
           <td scope="row">{{ product.id }}</td>
           <td>{{ product.name }}</td>
           <td>{{ FindCategoryName(product.category) }}</td>

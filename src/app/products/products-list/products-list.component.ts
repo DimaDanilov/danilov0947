@@ -11,8 +11,8 @@ import { Router } from '@angular/router';
 })
 export class ProductsListComponent implements OnInit {
   products: Product[];
-  category=null;
-
+  category=-1;
+  check_status=true;
   constructor(private productsService: ProductsService, private router: Router) {}
 
   ngOnInit(): void {
@@ -94,7 +94,5 @@ export class ProductsListComponent implements OnInit {
       this.sortType=1;
     }
   }
-
-
 
 }
