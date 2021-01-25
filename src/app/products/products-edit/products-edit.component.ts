@@ -31,11 +31,11 @@ export class ProductsEditComponent implements OnInit {
     this.productForm = new FormGroup({
       name: new FormControl(null, [Validators.required]),
       article: new FormControl(null, [Validators.required]),
-      price: new FormControl(null, [Validators.required]),
-      brand: new FormControl(null, [Validators.required]),
+      price: new FormControl(null, [Validators.required, Validators.min(0)]),
+      brand: new FormControl(null),
       category: new FormControl(null, [Validators.required]),
       weight: new FormControl(null, [Validators.required]),
-      amount: new FormControl(null, [Validators.required]),
+      amount: new FormControl(null, [Validators.required, Validators.min(0)]),
     });
     this.getData();
   }
