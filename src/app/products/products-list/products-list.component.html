@@ -1,5 +1,19 @@
 <div class="container-fluid">
+
+  <div class="form-group">
+    <label for="productcategory">Фильтр по категориям: </label>
+    <select class="custom-select" [(ngModel)]="category">
+      <option [ngValue]="-1">Все</option>
+      <option [ngValue]="0">Мебель</option>
+      <option [ngValue]="1">Техника</option>
+      <option [ngValue]="2">Книги</option>
+      <option [ngValue]="3">Телефоны</option>
+    </select>
+  </div>
+
+
     <table class="table">
+
       <thead>
         <tr>
           <th scope="col" width="10%">#</th>
@@ -18,7 +32,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let product of products | sort: lastsort: sortType">
+        <!-- <tr *ngFor="let product of products | sort: lastsort: sortType"> -->
+          <tr *ngFor="let product of products | sort: lastsort: sortType | filter: category">
           <td scope="row">{{ product.id }}</td>
           <td>{{ product.name }}</td>
           <td>{{ FindCategoryName(product.category) }}</td>

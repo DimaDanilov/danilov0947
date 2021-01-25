@@ -11,11 +11,13 @@ import { Router } from '@angular/router';
 })
 export class ProductsListComponent implements OnInit {
   products: Product[];
+  category=null;
 
   constructor(private productsService: ProductsService, private router: Router) {}
 
   ngOnInit(): void {
     this.getData();
+
   }
 
   async getData() {

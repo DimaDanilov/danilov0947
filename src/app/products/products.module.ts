@@ -6,9 +6,10 @@ import { ProductsComponent } from './products.component';
 import { ProductsEditComponent } from './products-edit/products-edit.component';
 import { ProductsListComponent } from './products-list/products-list.component';
 import { SortPipe } from '../shared/pipes/sort.pipe';
+import { FilterPipe } from '../shared/pipes/filter.pipe';
 
 @NgModule({
-  declarations: [ProductsComponent, ProductsEditComponent, ProductsListComponent, SortPipe],
+  declarations: [ProductsComponent, ProductsEditComponent, ProductsListComponent, SortPipe, FilterPipe],
   imports: [CommonModule, ProductsRoutingModule, ReactiveFormsModule, FormsModule],
 })
 export class ProductsModule {}
