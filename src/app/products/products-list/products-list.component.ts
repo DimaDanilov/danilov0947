@@ -34,7 +34,8 @@ export class ProductsListComponent implements OnInit {
   async onDecreaseAmount(id: number){
     try {
       let necessaryproduct = this.products.find(x => x.id === id);
-      necessaryproduct.amount--;
+      if (necessaryproduct.amount>=1)
+        necessaryproduct.amount--;
       this.productsService.putOneById(id, necessaryproduct);
     } catch (err) {
       console.error(err);
