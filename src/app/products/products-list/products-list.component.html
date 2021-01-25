@@ -3,11 +3,14 @@
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Имя</th>
-          <th scope="col">Фамилия</th>
+          <th scope="col">Название</th>
+          <th scope="col">Категория</th>
+          <th scope="col">Вес(кг)</th>
+          <th scope="col">Цена(руб.)</th>
+          <th scope="col">Количество на складе</th>
           <th class="text-right" scope="col">
             <button class="btn btn-primary" (click)="onAddProfile()">
-              Добавить пользователя
+              Добавить товар
             </button>
           </th>
         </tr>
@@ -16,7 +19,10 @@
         <tr *ngFor="let product of products">
           <td scope="row">{{ product.id }}</td>
           <td>{{ product.name }}</td>
-          <td>{{ product.name }}</td>
+          <td>{{ product.category }}</td>
+          <td>{{ product.weight }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.amount }}</td>
           <td class="text-right">
             <button class="btn btn-primary" (click)="onLinkProfile(product.id)">
               Редактировать
