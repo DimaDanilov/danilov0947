@@ -37,7 +37,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let product of products | sort: lastsort: sortType | filter: category: check_status">
+        <tr *ngFor="let product of products | filter: category: check_status | sort: lastsort: sortType">
           <td scope="row">{{ product.id }}</td>
           <td>{{ product.name }}</td>
           <td>{{ FindCategoryName(product.category) }}</td>
