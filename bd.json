@@ -6,39 +6,69 @@
       "price": 100000,
       "brand": "Apple",
       "category": 3,
-      "weight": 0.1,
+      "weight": 0.5,
       "amount": 12,
       "id": 1
     },
     {
-      "name": "Гарри Поттер",
-      "article": "ГП-291",
-      "price": 1634,
+      "name": "\"Гарри Поттер\"",
+      "article": "КН-2",
+      "price": 999,
       "brand": "Гарри Поттер Индастриз",
       "category": 2,
-      "weight": 3,
+      "weight": 0.04,
       "amount": 150,
       "id": 2
     },
     {
-      "name": "asd",
-      "article": "adwd",
-      "price": 1231231231,
-      "brand": "aeqwd",
+      "name": "\"Кошачьи войны\"",
+      "article": "КН-2",
+      "price": 123,
+      "brand": "Кошки Индастриз",
       "category": 2,
-      "weight": 222,
-      "amount": 2,
+      "weight": 0.03,
+      "amount": 0,
       "id": 3
     },
     {
-      "name": "фв",
-      "article": "фывф",
-      "price": 2131,
-      "brand": "фаы",
+      "name": "Комод \"Ненастье\"",
+      "article": "КМД-1",
+      "price": 4999,
+      "brand": "Мебель Индастриз",
       "category": 0,
-      "weight": 123,
+      "weight": 100,
       "amount": 0,
       "id": 4
+    },
+    {
+      "name": "Шкаф \"Потолок\"",
+      "article": "ШКФ-1",
+      "price": 9999,
+      "brand": "Мебель Индастриз",
+      "category": 0,
+      "weight": 500,
+      "amount": 20,
+      "id": 5
+    },
+    {
+      "name": "Honor 9",
+      "article": "HNR-9",
+      "price": 14999,
+      "brand": "Huawei",
+      "category": 3,
+      "weight": 0.1,
+      "amount": 0,
+      "id": 6
+    },
+    {
+      "name": "Стиральная машина",
+      "article": "СТРЛМШН-1",
+      "price": 19000,
+      "brand": "Vanish",
+      "category": 1,
+      "weight": 1000,
+      "amount": 1000,
+      "id": 7
     }
   ]
 }
