@@ -31,6 +31,26 @@ export class ProductsListComponent implements OnInit {
     this.router.navigate([this.router.url, 'profile', id]);
   }
 
+  async onDecreaseAmount(id: number){
+    try {
+      let necessaryproduct = this.products.find(x => x.id === id);
+      necessaryproduct.amount--;
+      this.productsService.putOneById(id, necessaryproduct);
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  async onIncreaseAmount(id: number){
+    try {
+      let necessaryproduct = this.products.find(x => x.id === id);
+      necessaryproduct.amount++;
+      this.productsService.putOneById(id, necessaryproduct);
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
   onAddProfile() {
     this.router.navigate([this.router.url, 'profile']);
   }

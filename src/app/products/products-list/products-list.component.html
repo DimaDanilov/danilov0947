@@ -2,12 +2,14 @@
     <table class="table">
       <thead>
         <tr>
-          <th scope="col">#</th>
+          <th scope="col" width="10%">#</th>
           <th scope="col">Название</th>
-          <th scope="col">Категория</th>
-          <th scope="col">Вес(кг)</th>
-          <th scope="col">Цена(руб.)</th>
-          <th scope="col">Количество на складе</th>
+          <th scope="col" width="15%">Категория</th>
+          <th scope="col" width="15%">Вес(кг)</th>
+          <th scope="col" width="10%">Цена(руб.)</th>
+          <th scope="col" width="2%"></th>
+          <th scope="col" width="10%">Количество на складе</th>
+          <th scope="col" width="2%"></th>
           <th class="text-right" scope="col">
             <button class="btn btn-primary" (click)="onAddProfile()">
               Добавить товар
@@ -22,7 +24,19 @@
           <td>{{ product.category }}</td>
           <td>{{ product.weight }}</td>
           <td>{{ product.price }}</td>
-          <td>{{ product.amount }}</td>
+          <td>
+            <button class="btn btn-primary rounded-pill" (click)="onDecreaseAmount(product.id)">
+              -
+            </button>
+          </td>
+          <td>
+            {{ product.amount }}
+          </td>
+          <td>
+            <button class="btn btn-primary rounded-pill" (click)="onIncreaseAmount(product.id)">
+              +
+            </button>
+          </td>
           <td class="text-right">
             <button class="btn btn-primary" (click)="onLinkProfile(product.id)">
               Редактировать
